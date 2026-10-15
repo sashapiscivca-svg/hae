@@ -4,7 +4,7 @@
 
 **A 313 k-parameter model that finds people in drone thermal imagery and runs on a $15 Raspberry Pi Zero 2 W.**
 
-[Українська](README.uk.md) · [Model card](MODEL_CARD.md) · [Data card](DATA_CARD.md) · [Documentation](docs/en/README.md) · [Responsible use](RESPONSIBLE_USE.md)
+**[▶ Live demo in your browser](https://huggingface.co/spaces/alexshynkarenk0/hae-demo)** · [Українська](README.uk.md) · [Model card](MODEL_CARD.md) · [Data card](DATA_CARD.md) · [Documentation](docs/en/README.md) · [Responsible use](RESPONSIBLE_USE.md)
 
 `code: MIT` · `weights: MIT` · `v1.0.0` · `Python ≥ 3.10` · `runtime: numpy + onnxruntime (no PyTorch)`
 

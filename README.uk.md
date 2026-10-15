@@ -4,7 +4,7 @@
 
 **Модель на 313 тис. параметрів, яка знаходить людей на тепловізійних знімках із дронів і працює на Raspberry Pi Zero 2 W вартістю 15 $.**
 
-[English](README.md) · [Картка моделі](MODEL_CARD.uk.md) · [Картка даних](DATA_CARD.uk.md) · [Документація](docs/uk/README.md) · [Відповідальне використання](RESPONSIBLE_USE.uk.md)
+**[▶ Живе демо в браузері](https://huggingface.co/spaces/alexshynkarenk0/hae-demo)** · [English](README.md) · [Картка моделі](MODEL_CARD.uk.md) · [Картка даних](DATA_CARD.uk.md) · [Документація](docs/uk/README.md) · [Відповідальне використання](RESPONSIBLE_USE.uk.md)
 
 `код: MIT` · `ваги: MIT` · `v1.0.0` · `Python ≥ 3.10` · `середовище виконання: numpy + onnxruntime (без PyTorch)`
 
