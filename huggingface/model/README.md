@@ -57,6 +57,10 @@ model-index:
 
 # hae-s-ir: open thermal person detector for search-and-rescue drones
 
+![HIT-UAV test frame with hae-s-ir detections: green boxes around 21 of 23 people, orange circles around the 2 missed](assets/hae-hero.jpg)
+
+*A real HIT-UAV test frame (night, 60 m): green — detections with scores, orange — missed people.*
+
 **hae-s-ir** finds people in thermal (LWIR) drone imagery. It has 313 k parameters, the int8 ONNX file is 383 KB, and a 256×320 tile runs in **55 ms on a Raspberry Pi Zero 2 W** (4 threads, measured). It was trained from scratch on openly licensed civilian data, and the code and weights are MIT-licensed.
 
 - Code, documentation and training recipe: https://github.com/sashapiscivca-svg/hae
