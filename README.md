@@ -12,6 +12,11 @@
 
 ---
 
+<p align="center"><img src="docs/assets/hae-hero.jpg" alt="Thermal drone frame from the HIT-UAV test set with hae-s-ir detections: green boxes around 21 of 23 people, orange circles around the 2 missed" width="820"></p>
+
+<p align="center"><em>A real HIT-UAV test frame (night, 60 m). Green: hae-s-ir int8 detections with their scores. Orange circles: people the model missed. Reproduce with <code>scripts/make_readme_figures.py</code>.</em></p>
+
+
 After floods, earthquakes and tsunamis, and when someone is lost in a forest or in the mountains, a drone with a thermal camera covers ground much faster than a search line on foot. A person seen from 50–120 m is only a few pixels tall, though, and an operator watching a live feed for hours will miss some of them. **hae** (해, Korean for "sun") is a small, fully open neural detector that flags likely people in thermal (LWIR) drone imagery. It is meant to help human searchers, not to replace them.
 
 Everything is open: inference and training code, the trained weights (ONNX fp32 / int8 and PyTorch `safetensors`), the exact training recipe, the evaluation protocol and the annotations of every data split. The model was trained **from scratch** on openly licensed civilian datasets. No third-party pretrained checkpoints were used.
@@ -90,6 +95,10 @@ The model was trained once (seed 0). Re-running the recipe moves AP50 by about �
 | AIResQ val (in-domain, real rescue footage, people ~8 px) | 502 | 933 | 0.238 | 0.230 | 0.52 / 0.24 / 3.11 | 0.56 / 0.19 / 4.42 |
 | WiSARD-IR val (**transfer**: never trained or tuned on) | 1,633 | 2,439 | 0.086 | 0.087 | 0.17 / 0.16 / 1.28 | 0.19 / 0.13 / 1.86 |
 
+![Four HIT-UAV test frames with detections: three night scenes where almost every person is found, and a daytime scene where most people are missed](docs/assets/hae-examples.jpg)
+
+*Four HIT-UAV test frames at the balanced threshold. At night, warm people stand out and almost all of them are found. In the daytime scene (bottom right), sun-heated ground hides people: the model finds 3 of 14. Thermal detection is much harder in daylight.*
+
 How to read this:
 
 - On footage like HIT-UAV (the same kind of cameras, people about 19 px tall), the model finds **about three quarters of people with about one false alarm per frame**.
@@ -154,6 +163,7 @@ python scripts/evaluate.py --model models-local/hae-s-ir/hae-s-ir_lwir_int8.onnx
 
 - **Domain shift is the main risk.** AP50 is 0.76 on HIT-UAV test but only 0.09 on WiSARD-IR (other cameras, sites and target sizes). Validate on your own camera and altitude before you rely on the model.
 - **Very small people are hard.** On AIResQ (people about 8 px tall), recall at the balanced preset is 0.52, with about three false alarms per frame.
+- **Daylight.** Sun-heated ground hides people in thermal imagery. In daytime HIT-UAV scenes the model misses many more people than at night (see the figure above).
 - **False alarms.** Warm rocks, animals, vehicles and debris trigger detections. Confirm candidates over time (tracking, several passes) before alerting an operator.
 - **One training run, modest validation sets.** The confidence intervals are wide.
 - **Not evaluated:** dense urban rubble, large crowds, heavy rain or fog, radiometric 14/16-bit input (convert it to 8-bit first), colour palettes other than white-hot grayscale.

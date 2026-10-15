@@ -14,6 +14,8 @@
 | **AIResQ Benchmark** | CC BY 4.0 | тепловізійне навчання й валідація | Büttner, J. *AIResQ Benchmark.* Zenodo (2025), doi:[10.5281/zenodo.17405074](https://doi.org/10.5281/zenodo.17405074). Ліцензовано під [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Зміни: див. вище. |
 | **WiSARD** (тепловізійна частина) | MIT | лише оцінювання (тест на перенесення, `wisard_ir_val`) | Broyles, D., Hayner, C. R., Leung, K. *WiSARD: A Labeled Visual and Thermal Image Dataset for Wilderness Search and Rescue.* IEEE/RSJ IROS 2022, pp. 9467–9474, doi:[10.1109/IROS47612.2022.9981298](https://doi.org/10.1109/IROS47612.2022.9981298). https://sites.google.com/uw.edu/wisard. Набір даних поширюється під ліцензією MIT, copyright (c) 2022 Daniel Broyles, Christopher Hayner, Karen Leung. Його дозвільне повідомлення: *"Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files … THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND …"* [Дозвіл безоплатно надається будь-якій особі, яка отримала копію цього програмного забезпечення та супровідної документації … ПРОГРАМНЕ ЗАБЕЗПЕЧЕННЯ НАДАЄТЬСЯ «ЯК Є», БЕЗ БУДЬ-ЯКИХ ГАРАНТІЙ …] (повний текст — як у [LICENSE](LICENSE), з наведеним вище рядком про авторські права). |
 
+Ілюстрації в README (`docs/assets/hae-*.jpg`) — тестові кадри HIT-UAV (CC0 1.0), показані в кольоровій палітрі й накладені на виявлення нашої моделі.
+
 Чи поширюються обов'язки щодо зазначення авторства на ваги моделі, натреновані на цих наборах даних, юридично не врегульовано. Ми все одно зазначаємо авторство, а метадані ONNX моделі називають набори даних, на яких її навчено (ключ `training_data`).
 
 ### Набори даних, які розглядали, але не використали

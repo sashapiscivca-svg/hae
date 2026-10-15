@@ -14,6 +14,8 @@ The hae source code and trained weights are released under the [MIT License](LIC
 | **AIResQ Benchmark** | CC BY 4.0 | thermal training and validation | Büttner, J. *AIResQ Benchmark.* Zenodo (2025), doi:[10.5281/zenodo.17405074](https://doi.org/10.5281/zenodo.17405074). Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Changes: see above. |
 | **WiSARD** (thermal part) | MIT | evaluation only (transfer test, `wisard_ir_val`) | Broyles, D., Hayner, C. R., Leung, K. *WiSARD: A Labeled Visual and Thermal Image Dataset for Wilderness Search and Rescue.* IEEE/RSJ IROS 2022, pp. 9467–9474, doi:[10.1109/IROS47612.2022.9981298](https://doi.org/10.1109/IROS47612.2022.9981298). https://sites.google.com/uw.edu/wisard. The dataset is distributed under the MIT License, copyright (c) 2022 Daniel Broyles, Christopher Hayner, Karen Leung. Its permission notice: *"Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files … THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND …"* (full text as in [LICENSE](LICENSE), with the copyright line above). |
 
+The README figures (`docs/assets/hae-*.jpg`) show HIT-UAV test frames (CC0 1.0), shown with a colour palette and overlaid with our detections.
+
 Whether attribution duties extend to model weights trained on these datasets is not settled in law. We give the attribution anyway, and the ONNX metadata of the model names its training datasets (`training_data` key).
 
 ### Datasets considered and not used
