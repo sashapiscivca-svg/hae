@@ -1,0 +1,23 @@
+# hae-s-ir: ir-v3: trained from scratch for 90 epochs on HIT-UAV trainval (60% of crops) + AIResQ train (40%); thermal only; train-time scale jitter 0.9-2.4; inference at x1.5; copy-paste 0.3; soft negatives (neg_decay=1.0)
+# Training data: HIT-UAV (CC0-1.0); AIResQ Benchmark (CC-BY-4.0). Reproduces models/hae-s-ir/config.json["training"].
+name: hae-s-ir
+train_sets:              # first = main set; weights = share of training batches (sum 1)
+  - {name: hituav_trainval, weight: 0.6}
+  - {name: airesq_train, weight: 0.4}
+val_sets: [hituav_test, airesq_val, wisard_ir_val]   # first = in-training validation; all = final evaluation
+eval_stride: 4           # in-training validation on every 4th frame
+train:                  # hae.train.TrainConfig fields
+  epochs: 90
+  crops_per_epoch: 4900
+  batch: 32
+  lr: 0.003
+  mode_probs: [0, 0, 1]           # both/rgb/lwir mode probabilities
+  eval_every: 30                  # full validation every N epochs
+  eval_modes: [lwir]
+  size: s
+  scale_range: [0.9, 2.4]         # train-time crop scale jitter (flight altitude)
+  eval_scale: 1.5                 # inference input scale
+  copy_paste: 0.3                 # paste people with local background into crops
+  tnorm: true                     # per-frame thermal z-score normalisation
+  ctx: true                       # stride-32 context level
+  neg_decay: 1.0                  # soft negatives near targets

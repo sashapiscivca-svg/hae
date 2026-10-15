@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use hae, please cite it as below, and cite the datasets you use (see NOTICE.md)."
+title: "hae: an open thermal person detector for search-and-rescue drones"
+type: software
+authors:
+  - name: "The hae authors"
+version: 1.0.0
+date-released: 2026-10-15
+license: MIT
+repository-code: "https://github.com/sashapiscivca-svg/hae"
+url: "https://huggingface.co/sashapiscivca-svg/hae-s-ir"
+keywords:
+  - search and rescue
+  - object detection
+  - thermal imaging
+  - drones
+  - tiny object detection
+  - edge AI
+  - Raspberry Pi
+abstract: >-
+  hae-s-ir is a small, fully open person detector for thermal (LWIR) aerial imagery,
+  trained from scratch on openly licensed civilian datasets and designed to run on a Raspberry Pi Zero 2 W.

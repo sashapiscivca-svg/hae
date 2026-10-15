@@ -1,0 +1,18 @@
+{
+ "hae_version": "1.0.0",
+ "models": [
+  {
+   "name": "hae-s-ir",
+   "mode": "lwir",
+   "params": 313169,
+   "gmac": 0.269,
+   "files": [
+    "config.json",
+    "hae-s-ir.safetensors",
+    "hae-s-ir_lwir.onnx",
+    "hae-s-ir_lwir_int8.onnx",
+    "metrics.json"
+   ]
+  }
+ ]
+}

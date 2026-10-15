@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+# local data, caches and outputs
+data/*
+!data/annotations/
+!data/README.md
+cache/
+runs/
+models-local/
+*.pt

@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hae"
+version = "1.0.0"
+description = "Open tiny thermal person detector for search-and-rescue drones; runs on a Raspberry Pi Zero 2 W"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE.md"]
+authors = [{ name = "The hae authors" }]
+keywords = ["search and rescue", "object detection", "thermal", "drone", "UAV", "tiny objects", "onnx", "edge AI", "raspberry pi"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# runtime: inference only, no PyTorch
+dependencies = ["numpy>=1.24", "onnx>=1.14", "onnxruntime>=1.16", "opencv-python-headless>=4.8", "pillow>=10"]
+
+[project.optional-dependencies]
+hub = ["huggingface_hub>=0.20"]
+train = ["torch>=2.2", "pycocotools>=2.0.7", "tensorboard>=2.14", "pyyaml>=6", "safetensors>=0.4", "rich>=13", "matplotlib>=3.7"]
+dev = ["pytest>=8", "ruff>=0.5", "safetensors>=0.4", "pyyaml>=6"]
+
+[project.urls]
+Homepage = "https://github.com/sashapiscivca-svg/hae"
+Documentation = "https://github.com/sashapiscivca-svg/hae/tree/main/docs/en"
+Models = "https://huggingface.co/sashapiscivca-svg/hae-s-ir"
+Issues = "https://github.com/sashapiscivca-svg/hae/issues"
+
+[project.scripts]
+hae = "hae.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["hae*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 160
+extend-exclude = ["runs", "cache", "data"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "B023"]
+ignore = ["E702", "E741", "E731", "E402"]
+per-file-ignores = { "tests/*" = ["B023"] }
