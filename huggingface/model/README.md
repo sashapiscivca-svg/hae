@@ -64,6 +64,7 @@ model-index:
 **hae-s-ir** finds people in thermal (LWIR) drone imagery. It has 313 k parameters, the int8 ONNX file is 383 KB, and a 256×320 tile runs in **55 ms on a Raspberry Pi Zero 2 W** (4 threads, measured). It was trained from scratch on openly licensed civilian data, and the code and weights are MIT-licensed.
 
 - **Live demo (runs in your browser):** https://huggingface.co/spaces/alexshynkarenk0/hae-demo
+- **Related model:** [hae-n-ir-ext-kdf](https://huggingface.co/alexshynkarenk0/hae-n-ir-ext-kdf) (code: https://github.com/sashapiscivca-svg/hae-n-ir-ext-kdf), a real-time model for forest and wilderness footage
 - Code, documentation and training recipe: https://github.com/sashapiscivca-svg/hae
 - Full model card (EN): https://github.com/sashapiscivca-svg/hae/blob/main/MODEL_CARD.md · (UK): https://github.com/sashapiscivca-svg/hae/blob/main/MODEL_CARD.uk.md
 - Responsible use: https://github.com/sashapiscivca-svg/hae/blob/main/RESPONSIBLE_USE.md

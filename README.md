@@ -54,6 +54,8 @@ Everything about the model is in [`models/hae-s-ir/`](models/hae-s-ir): `config.
 
 **Why only one model?** We trained a family of sizes (n/t/s/m) and an RGB line. This release ships the model we can stand behind. hae-s-ir is the most accurate on the main thermal benchmark (it beats the 2.6× larger `m`), and it fits the compute budget of a Raspberry Pi Zero 2 W. The RGB line is not ready for release. Other variants will follow only once they clearly add value.
 
+**Related models:** [hae-n-ir-ext-kdf](https://github.com/sashapiscivca-svg/hae-n-ir-ext-kdf) ([Hugging Face](https://huggingface.co/alexshynkarenk0/hae-n-ir-ext-kdf)), a 54 k-parameter real-time model for forest and wilderness footage, published separately; it runs with this package.
+
 ## Quick start
 
 ```bash
