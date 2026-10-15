@@ -16,7 +16,7 @@ pip install -e ".[hub]"          # + huggingface_hub, to download models by name
 1. an explicit path to an `.onnx` file;
 2. the `root=` argument, then the `$HAE_MODELS` directory;
 3. `./models` in the current directory, then the `models/` directory of the repository;
-4. the Hugging Face Hub (`sashapiscivca-svg/hae-s-ir`), if `huggingface_hub` is installed. Files are cached locally.
+4. the Hugging Face Hub (`alexshynkarenk0/hae-s-ir`), if `huggingface_hub` is installed. Files are cached locally.
 
 A model directory is `<root>/<name>/<name>_<mode>[_int8].onnx` with `mode` = `lwir` or `rgb`. The int8 file is the default.
 

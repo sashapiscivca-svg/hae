@@ -33,7 +33,7 @@ dev = ["pytest>=8", "ruff>=0.5", "safetensors>=0.4", "pyyaml>=6"]
 [project.urls]
 Homepage = "https://github.com/sashapiscivca-svg/hae"
 Documentation = "https://github.com/sashapiscivca-svg/hae/tree/main/docs/en"
-Models = "https://huggingface.co/sashapiscivca-svg/hae-s-ir"
+Models = "https://huggingface.co/alexshynkarenk0/hae-s-ir"
 Issues = "https://github.com/sashapiscivca-svg/hae/issues"
 
 [project.scripts]

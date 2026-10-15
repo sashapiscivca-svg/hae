@@ -1,6 +1,6 @@
 """Download released hae models from the Hugging Face Hub (optional dependency: `pip install "hae[hub]"`).
 
-One Hub repository per model (`<org>/<name>`, e.g. sashapiscivca-svg/hae-s-ir) with files at the repository root: `<name>_<mode>.onnx`,
+One Hub repository per model (`<org>/<name>`, e.g. alexshynkarenk0/hae-s-ir) with files at the repository root: `<name>_<mode>.onnx`,
 `<name>_<mode>_int8.onnx`, `<name>.safetensors`, `config.json`, `metrics.json`. Mode is `lwir` for thermal models (`hae-*-ir`)
 and `rgb` otherwise. Files are cached by `huggingface_hub` (see `cache_dir`).
 """
@@ -11,7 +11,7 @@ import re
 from pathlib import Path
 
 # Default Hugging Face namespace of the released models; override with $HAE_HF_ORG.
-HF_ORG = os.environ.get("HAE_HF_ORG", "sashapiscivca-svg")
+HF_ORG = os.environ.get("HAE_HF_ORG", "alexshynkarenk0")
 RELEASED_MODELS = ("hae-s-ir",)   # models published on the Hub; `hae download --all` fetches these
 
 

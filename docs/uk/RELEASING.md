@@ -6,7 +6,7 @@
 
 ## 1. Перед першою публікацією
 
-1. Простір імен GitHub — `sashapiscivca-svg`; таке саме ім'я передбачено і для Hugging Face Hub. Якщо воно зміниться, замініть його всюди: `grep -rl sashapiscivca-svg . | xargs sed -i 's/sashapiscivca-svg/<нове-ім'я>/g'` (після цього перевірте `git diff`). Значення за замовчуванням для середовища виконання задано в `src/hae/hub.py` (`HAE_HF_ORG`); GitHub перенаправляє перейменовані акаунти, Hugging Face — ні.
+1. Простори імен: GitHub `sashapiscivca-svg` (репозиторій `hae`), Hugging Face `alexshynkarenk0` (модель `hae-s-ir`, набір `hae-thermal-sar-annotations`). Якщо якийсь зміниться, замініть його всюди командою `grep -rl <старе> . | xargs sed -i 's/<старе>/<нове>/g'` і перевірте `git diff`. Значення за замовчуванням для завантажень задано в `src/hae/hub.py` (`HAE_HF_ORG`); GitHub перенаправляє перейменовані акаунти, Hugging Face — ні.
 2. Увімкніть приватне повідомлення про вразливості GitHub (Settings → Code security), на яке спирається [SECURITY.md](SECURITY.md).
 
 ## 2. Перевірка

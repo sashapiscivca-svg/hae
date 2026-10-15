@@ -60,13 +60,13 @@ def test_download_command_uses_hub(monkeypatch, capsys):
     import types
     from hae import cli
     from hae import hub
-    monkeypatch.setattr(hub, "HF_ORG", "sashapiscivca-svg")
+    monkeypatch.setattr(hub, "HF_ORG", "alexshynkarenk0")
     calls = []
     fake = types.ModuleType("huggingface_hub")
     fake.hf_hub_download = lambda repo_id, filename, revision=None, cache_dir=None: calls.append((repo_id, filename, revision)) or f"/cache/{filename}"
     monkeypatch.setitem(sys.modules, "huggingface_hub", fake)
     assert cli.main(["download", "hae-n-ir", "hae-s-rgb", "--fp32"]) == 0
-    assert calls == [("sashapiscivca-svg/hae-n-ir", "hae-n-ir_lwir.onnx", None), ("sashapiscivca-svg/hae-s-rgb", "hae-s-rgb_rgb.onnx", None)]
+    assert calls == [("alexshynkarenk0/hae-n-ir", "hae-n-ir_lwir.onnx", None), ("alexshynkarenk0/hae-s-rgb", "hae-s-rgb_rgb.onnx", None)]
     calls.clear()
     assert cli.main(["download", "--all"]) == 0 and len(calls) == 1 and all(c[1].endswith("_int8.onnx") for c in calls)
     assert "hae-n-ir" in capsys.readouterr().out

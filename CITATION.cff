@@ -8,7 +8,7 @@ version: 1.0.0
 date-released: 2026-10-15
 license: MIT
 repository-code: "https://github.com/sashapiscivca-svg/hae"
-url: "https://huggingface.co/sashapiscivca-svg/hae-s-ir"
+url: "https://huggingface.co/alexshynkarenk0/hae-s-ir"
 keywords:
   - search and rescue
   - object detection

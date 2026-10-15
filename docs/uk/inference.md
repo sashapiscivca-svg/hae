@@ -16,7 +16,7 @@ pip install -e ".[hub]"          # + huggingface_hub, щоб завантажу�
 1. явний шлях до файлу `.onnx`;
 2. аргумент `root=`, потім каталог `$HAE_MODELS`;
 3. `./models` у поточному каталозі, потім каталог `models/` репозиторію;
-4. Hugging Face Hub (`sashapiscivca-svg/hae-s-ir`), якщо встановлено `huggingface_hub`. Файли кешуються локально.
+4. Hugging Face Hub (`alexshynkarenk0/hae-s-ir`), якщо встановлено `huggingface_hub`. Файли кешуються локально.
 
 Каталог моделі має вигляд `<root>/<name>/<name>_<mode>[_int8].onnx`, де `mode` = `lwir` або `rgb`. За замовчуванням використовується файл int8.
 

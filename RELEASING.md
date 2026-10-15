@@ -6,7 +6,7 @@ The steps a maintainer follows to publish a version on GitHub and the Hugging Fa
 
 ## 1. Before the first publication
 
-1. The GitHub namespace is `sashapiscivca-svg`, and the same name is assumed for the Hugging Face Hub. If it changes, replace it everywhere: `grep -rl sashapiscivca-svg . | xargs sed -i 's/sashapiscivca-svg/<new-name>/g'` (check `git diff` afterwards). The runtime default lives in `src/hae/hub.py` (`HAE_HF_ORG`); GitHub redirects renamed accounts, Hugging Face does not.
+1. Namespaces: GitHub `sashapiscivca-svg` (repository `hae`), Hugging Face `alexshynkarenk0` (model `hae-s-ir`, dataset `hae-thermal-sar-annotations`). If one changes, replace it everywhere with `grep -rl <old> . | xargs sed -i 's/<old>/<new>/g'` and check `git diff`. The runtime default for downloads lives in `src/hae/hub.py` (`HAE_HF_ORG`); GitHub redirects renamed accounts, Hugging Face does not.
 2. Enable GitHub private vulnerability reporting (Settings → Code security), which [SECURITY.md](SECURITY.md) relies on.
 
 ## 2. Verify

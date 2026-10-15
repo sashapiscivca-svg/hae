@@ -1,7 +1,7 @@
 ---
 pretty_name: hae thermal SAR annotations
 license: other
-license_name: per-file (CC0-1.0, CC-BY-4.0, MIT)
+license_name: per-file-cc0-1.0-cc-by-4.0-mit
 license_link: https://github.com/sashapiscivca-svg/hae/blob/main/NOTICE.md
 task_categories:
   - object-detection
@@ -32,7 +32,7 @@ configs:
 
 # hae thermal SAR annotations (v1.0.0)
 
-These are the exact COCO annotations of every split used to train and evaluate the open thermal person detector [hae-s-ir](https://huggingface.co/sashapiscivca-svg/hae-s-ir), converted from three openly licensed civilian datasets. **The images are not included.** Download them from the original sources, then run `scripts/prepare_data.py` from https://github.com/sashapiscivca-svg/hae to convert and align them.
+These are the exact COCO annotations of every split used to train and evaluate the open thermal person detector [hae-s-ir](https://huggingface.co/alexshynkarenk0/hae-s-ir), converted from three openly licensed civilian datasets. **The images are not included.** Download them from the original sources, then run `scripts/prepare_data.py` from https://github.com/sashapiscivca-svg/hae to convert and align them.
 
 | File | Source | Licence | Frames | People | Role |
 |---|---|---|---:|---:|---|

@@ -78,7 +78,7 @@ for (x1, y1, x2, y2), score in zip(res.boxes, res.conf):
 res.save("frame_detections.png")
 ```
 
-Без клонування репозиторію команди `pip install "hae[hub] @ git+https://github.com/sashapiscivca-svg/hae"` та `hae download hae-s-ir` завантажують ваги з [Hugging Face Hub](https://huggingface.co/sashapiscivca-svg/hae-s-ir). Файли можна запускати безпосередньо в будь-якому середовищі виконання ONNX (C++, Rust, мобільні платформи, вебзастосунки). Контракт входів і виходів описано в [docs/uk/inference.md](docs/uk/inference.md).
+Без клонування репозиторію команди `pip install "hae[hub] @ git+https://github.com/sashapiscivca-svg/hae"` та `hae download hae-s-ir` завантажують ваги з [Hugging Face Hub](https://huggingface.co/alexshynkarenk0/hae-s-ir). Файли можна запускати безпосередньо в будь-якому середовищі виконання ONNX (C++, Rust, мобільні платформи, вебзастосунки). Контракт входів і виходів описано в [docs/uk/inference.md](docs/uk/inference.md).
 
 ## Результати
 

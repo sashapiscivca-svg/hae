@@ -16,7 +16,7 @@ tags:
   - onnx
   - int8
 datasets:
-  - sashapiscivca-svg/hae-thermal-sar-annotations
+  - alexshynkarenk0/hae-thermal-sar-annotations
 language:
   - en
   - uk

@@ -78,7 +78,7 @@ for (x1, y1, x2, y2), score in zip(res.boxes, res.conf):
 res.save("frame_detections.png")
 ```
 
-Without the repository, `pip install "hae[hub] @ git+https://github.com/sashapiscivca-svg/hae"` and `hae download hae-s-ir` fetch the weights from the [Hugging Face Hub](https://huggingface.co/sashapiscivca-svg/hae-s-ir). Any ONNX runtime can run the files directly (C++, Rust, mobile, web). The input and output contract is described in [docs/en/inference.md](docs/en/inference.md).
+Without the repository, `pip install "hae[hub] @ git+https://github.com/sashapiscivca-svg/hae"` and `hae download hae-s-ir` fetch the weights from the [Hugging Face Hub](https://huggingface.co/alexshynkarenk0/hae-s-ir). Any ONNX runtime can run the files directly (C++, Rust, mobile, web). The input and output contract is described in [docs/en/inference.md](docs/en/inference.md).
 
 ## Results
 
