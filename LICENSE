@@ -19,8 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-The "Software" includes the source code and the trained model weights
-(ONNX and safetensors files) distributed in this repository. Third-party
-datasets referenced by this project are NOT part of the Software and remain
-under their own licences; see NOTICE.md.
